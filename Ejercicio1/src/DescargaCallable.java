@@ -13,9 +13,12 @@ public class DescargaCallable implements Callable<String> {
 	@Override
 	public String call() throws Exception {
 		// TODO: esperar
+		//dormimos el thread
+		Thread.sleep(tiempoDescarga*1000);
 		
 		// TODO: devolver mensaje "Archivo X descargado en T segundos"
-		return "";
+		
+		return "Archivo "+archivo+" descargado en "+ tiempoDescarga+" segundos";
 	}
 
 }
